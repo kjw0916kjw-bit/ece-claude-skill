@@ -120,7 +120,8 @@ ok(`${skillDirs.length} skills, ${agents.length} agents, ${commands.length} comm
 const PRIVACY = [
   { name: 'Windows user path', re: /[A-Za-z]:\\Users\\[^\\\s]+|\/c\/Users\/[^/\s]+/ },
   { name: 'email address', re: /[A-Za-z0-9._%+-]+@(?!users\.noreply\.github\.com)[A-Za-z0-9.-]+\.[A-Za-z]{2,}/ },
-  { name: 'Korean mobile number', re: /01[016789][-.\s]?\d{3,4}[-.\s]?\d{4}/ },
+  // template placeholders such as 010-0000-0000 are allowed (same rule as scripts/privacy-warning.js)
+  { name: 'Korean mobile number', re: /01[016789][-.\s]?(?!0{3,4}[-.\s]?0{4}(?!\d))\d{3,4}[-.\s]?\d{4}/ },
   { name: 'resident registration number', re: /\b\d{6}[-\s]?[1-4]\d{6}\b/ },
   { name: 'GitHub token', re: /\bgh[pousr]_[A-Za-z0-9]{20,}/ },
   { name: 'Anthropic API key', re: /\bsk-ant-[A-Za-z0-9_-]{20,}/ },

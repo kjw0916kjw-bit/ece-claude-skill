@@ -1,5 +1,5 @@
 {
-  "description": "ECE plugin hooks: load the user's ECE notes (~/.claude/ece/user-notes.md) into context at session start.",
+  "description": "ECE plugin hooks: load the user's ECE notes at session start, and warn when a saved document contains sensitive personal numbers.",
   "hooks": {
     "SessionStart": [
       {
@@ -7,6 +7,18 @@
           {
             "type": "command",
             "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/load-user-notes.js\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/privacy-warning.js\"",
             "timeout": 10
           }
         ]
