@@ -8,7 +8,7 @@ argument-hint: "<기억할 규칙이나 피드백>"
 내용: $ARGUMENTS
 
 1. 사용자 노트 파일은 `~/.claude/ece/user-notes.md`다. (플러그인 폴더는 업데이트 때 덮어써지므로 여기에 쓰지 않는다.)
-2. 파일이 없으면 플러그인의 `skills/early-childhood-education/references/user-notes.md` 양식을 복사해 만든다. 폴더가 없으면 만든다.
+2. 파일이 없으면 플러그인의 `skills/early-childhood-education/references/user-notes.template.md` 양식을 복사해 만든다. 폴더가 없으면 만든다.
 3. 내용을 분류해 알맞은 칸에 추가한다:
    - 사용자 정보(역할, 기관 유형, 담당 연령, 저장 위치) → "사용자 정보"
    - 양식·말투·용어 규칙 → "선호 양식·규칙"

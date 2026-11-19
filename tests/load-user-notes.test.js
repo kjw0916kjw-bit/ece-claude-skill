@@ -13,7 +13,7 @@ const { spawnSync } = require('child_process');
 
 const ROOT = path.resolve(__dirname, '..');
 const SCRIPT = path.join(ROOT, 'scripts', 'load-user-notes.js');
-const TEMPLATE = path.join(ROOT, 'skills', 'early-childhood-education', 'references', 'user-notes.md');
+const TEMPLATE = path.join(ROOT, 'skills', 'early-childhood-education', 'references', 'user-notes.template.md');
 
 function run(configDir) {
   return spawnSync(process.execPath, [SCRIPT], {
