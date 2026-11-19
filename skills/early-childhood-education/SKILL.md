@@ -30,11 +30,11 @@ description: 유아교육·보육(영유아, 만 0~5세) 전문 지식 베이스
 | `references/observation-assessment.md` | 관찰 기록 방법, 유아 평가, 포트폴리오 | 관찰일지, 평가, 기록 작성 |
 | `references/templates.md` | 놀이계획·관찰기록·가정통신문·상담기록 양식과 예시 | 문서 작성 요청 |
 | `references/policy.md` | 유보통합, 기관 평가, 안전교육, 아동학대 신고 등 | 정책·제도·안전 질문 |
-| `references/user-notes.md` | 사용자 노트의 **빈 양식** (실제 노트는 아래 위치) | `/ece:learn`으로 처음 만들 때 |
+| `references/user-notes.template.md` | 사용자 노트의 **빈 양식** (실제 노트는 아래 위치) | `/ece:learn`으로 처음 만들 때 |
 
 ## 사용자 노트 (학습 기록)
 
-실제 사용자 규칙·피드백은 **`~/.claude/ece/user-notes.md`**에 저장한다. 플러그인 폴더는 업데이트 때 덮어써지므로 여기에 쓰지 않는다. 파일이 없으면 `references/user-notes.md` 양식으로 새로 만든다.
+실제 사용자 규칙·피드백은 **`~/.claude/ece/user-notes.md`**에 저장한다. 플러그인 폴더는 업데이트 때 덮어써지므로 여기에 쓰지 않는다. 파일이 없으면 `references/user-notes.template.md` 양식으로 새로 만든다.
 
 플러그인의 SessionStart 훅(`hooks/hooks.json` → `scripts/load-user-notes.js`)이 세션을 시작할 때 이 노트를 자동으로 컨텍스트에 넣는다. 그래서 대화 맨 앞에 "[ece 플러그인] 사용자의 유아교육 작업 규칙"이 보이면 이미 읽은 것이니 다시 읽지 않아도 된다. 노트를 고친 뒤 같은 세션에서 쓸 때는 파일을 다시 읽는다.
 
