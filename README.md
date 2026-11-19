@@ -81,6 +81,23 @@ Claude Code에서:
 /ece:notes tidy                # 중복 합치기, 피드백을 규칙으로 정리
 ```
 
+## 자동 검사
+
+PR을 올리거나 `main`에 반영될 때마다 GitHub Actions가 검사합니다 (`.github/workflows/validate.yml`). 외부 패키지 없이 Node만 사용합니다.
+
+| 검사 | 내용 |
+|---|---|
+| 매니페스트 | `plugin.json`·`marketplace.json`·`hooks.json` 형식, 두 파일의 버전 일치, 훅 스크립트 존재 |
+| 구성 요소 | 스킬·에이전트·명령어의 `name`·`description`, 파일명과 이름 일치, 이름 중복, SKILL.md가 가리키는 참고·예시 파일 존재 |
+| 개인정보 | 로컬 사용자 경로, 이메일, 휴대전화 번호, 주민등록번호, GitHub 토큰, Anthropic API 키 |
+| 훅 테스트 | 노트 없음 / 빈 양식 / 실제 노트 / 긴 노트 / 읽을 수 없는 경로 (5개) |
+
+로컬에서 실행:
+```
+node scripts/ci/validate.js
+node --test tests/
+```
+
 ## 주의
 
 - 내용은 일반적인 유아교육 지식을 바탕으로 작성했으며, 고시 원문과의 대조 검증은 진행 중입니다.
