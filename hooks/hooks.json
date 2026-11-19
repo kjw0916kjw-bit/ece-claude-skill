@@ -1,0 +1,16 @@
+{
+  "description": "ECE plugin hooks: load the user's ECE notes (~/.claude/ece/user-notes.md) into context at session start.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/load-user-notes.js\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
