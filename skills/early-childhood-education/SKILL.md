@@ -42,6 +42,7 @@ description: 유아교육·보육(영유아, 만 0~5세) 전문 지식 베이스
 | 작업 | 스킬 | 에이전트 | 명령어 |
 |---|---|---|---|
 | 놀이계획안 | `play-planning` | `play-planner` | `/ece:play-plan` |
+| 영아반(0~2세) 전반 | `play-planning`, `observation-records`, `parent-communication` | `infant-toddler-teacher` | (요청하면 자동 위임) |
 | 관찰기록·종합 의견 | `observation-records` | `observation-analyst` | `/ece:observe` |
 | 가정통신문·알림장·상담 | `parent-communication` | `parent-communicator` | `/ece:notice`, `/ece:daily-note`, `/ece:parent-meeting` |
 | 문서 검토 | — | `curriculum-reviewer`, `safety-health-advisor` | `/ece:review` |
