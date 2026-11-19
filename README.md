@@ -47,10 +47,13 @@
 | `skills/parent-communication/examples/` | 현장체험학습 가정통신문, 물림 사고 안내, 알림장 3종 |
 | `skills/teacher-career/examples/` | 면접 모범 답변 5개 |
 
-**훅 1개**
+**훅 2개**
 | 훅 | 하는 일 |
 |---|---|
 | `SessionStart` → `scripts/load-user-notes.js` | 세션을 시작할 때 `~/.claude/ece/user-notes.md`를 자동으로 불러옵니다. 노트가 없거나 빈 양식이면 아무것도 하지 않습니다. |
+| `PostToolUse` (Write·Edit) → `scripts/privacy-warning.js` | Claude가 문서(.md .txt .html .csv)를 저장하면 **휴대전화 번호, 주민·외국인등록번호, 카드 번호**가 들어 있는지 검사해서 경고합니다. 번호는 일부를 가려서 보여 주고(예: `010-****-5678`), 저장을 막지는 않습니다. `010-0000-0000` 같은 양식용 번호는 건너뜁니다. 끄려면 환경 변수 `ECE_PRIVACY_WARNING=0`을 설정합니다. |
+
+> 개인정보 경고 훅은 Claude가 Write·Edit 도구로 저장한 텍스트 문서만 검사합니다. 워드(.docx)처럼 스크립트로 만든 파일이나 유아 실명은 검사하지 못하니, 이름은 이니셜·가명으로 쓰는 습관을 함께 지켜 주세요.
 
 ## 설치
 
@@ -90,7 +93,7 @@ PR을 올리거나 `main`에 반영될 때마다 GitHub Actions가 검사합니�
 | 매니페스트 | `plugin.json`·`marketplace.json`·`hooks.json` 형식, 두 파일의 버전 일치, 훅 스크립트 존재 |
 | 구성 요소 | 스킬·에이전트·명령어의 `name`·`description`, 파일명과 이름 일치, 이름 중복, SKILL.md가 가리키는 참고·예시 파일 존재 |
 | 개인정보 | 로컬 사용자 경로, 이메일, 휴대전화 번호, 주민등록번호, GitHub 토큰, Anthropic API 키 |
-| 훅 테스트 | 노트 없음 / 빈 양식 / 실제 노트 / 긴 노트 / 읽을 수 없는 경로 (5개) |
+| 훅 테스트 | 노트 로드 훅 5개 + 개인정보 경고 훅 8개 (감지·가림, 문서 외 파일 무시, 끄기 설정, 잘못된 입력, 양식 번호 제외) |
 
 로컬에서 실행:
 ```
