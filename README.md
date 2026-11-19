@@ -15,10 +15,11 @@
 | `parent-communication` | 가정통신문, 알림장, 부모상담, 사고 안내 |
 | `teacher-career` | 채용 면접, 임용 준비, 자기소개서 |
 
-**에이전트 6명**
+**에이전트 7명**
 | 에이전트 | 역할 |
 |---|---|
 | `play-planner` | 놀이계획 담당 교사 |
+| `infant-toddler-teacher` | 영아반(만 0~2세) 전담 교사: 일과, 적응, 기본생활, 물기·분리불안 대응, 영아 관찰, 영아반 부모 소통 |
 | `observation-analyst` | 관찰기록 분석가 |
 | `parent-communicator` | 학부모 소통 담당 |
 | `curriculum-reviewer` | 누리과정·놀이중심 검토자 (읽기 전용) |
