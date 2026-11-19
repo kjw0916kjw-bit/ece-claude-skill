@@ -37,6 +37,19 @@
 | `/ece:mock-interview [기관] [신입/경력] [질문 수]` | 모의면접 |
 | `/ece:learn <기억할 내용>` | 내 규칙·피드백 저장 |
 
+**예시 8개** — 스킬이 결과물을 쓰기 전에 형식과 수준을 맞추는 기준 (모두 가상 사례)
+| 위치 | 예시 |
+|---|---|
+| `skills/play-planning/examples/` | 만 4세 주간 계획·실행 기록, 만 1세 영아반 일과 |
+| `skills/observation-records/examples/` | 메모 → 일화기록 변환, 만 5세 학기말 종합 의견 |
+| `skills/parent-communication/examples/` | 현장체험학습 가정통신문, 물림 사고 안내, 알림장 3종 |
+| `skills/teacher-career/examples/` | 면접 모범 답변 5개 |
+
+**훅 1개**
+| 훅 | 하는 일 |
+|---|---|
+| `SessionStart` → `scripts/load-user-notes.js` | 세션을 시작할 때 `~/.claude/ece/user-notes.md`를 자동으로 불러옵니다. 노트가 없거나 빈 양식이면 아무것도 하지 않습니다. |
+
 ## 설치
 
 Claude Code에서:
@@ -48,7 +61,9 @@ Claude Code에서:
 
 ## 나에게 맞게 학습시키기
 
-`/ece:learn`으로 알려준 규칙과 피드백은 `~/.claude/ece/user-notes.md`에 저장되고, 모든 스킬과 에이전트가 이 내용을 우선 적용합니다. (플러그인을 업데이트해도 지워지지 않습니다.)
+`/ece:learn`으로 알려준 규칙과 피드백은 `~/.claude/ece/user-notes.md`에 저장됩니다. 세션을 시작할 때 훅이 이 파일을 자동으로 불러오기 때문에, 어떤 대화에서든 유아교육 작업을 할 때 이 내용이 우선 적용됩니다. (플러그인을 업데이트해도 지워지지 않습니다.)
+
+내 기관의 실제 양식이나 잘 쓴 문서가 있다면 (실명은 지우고) 해당 스킬의 `examples/`에 추가해 보세요. Claude가 그 수준에 맞춰 작성합니다.
 
 예시:
 ```

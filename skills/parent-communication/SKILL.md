@@ -38,4 +38,9 @@ description: 학부모 소통 문서 작성 — 가정통신문, 알림장(키�
 - **어려운 주제**(또래 갈등, 발달 우려): 진단하지 않는다. "이런 모습이 관찰되어 함께 살펴보고 싶다" → 필요 시 영유아건강검진·전문기관 안내.
 - **기록**: templates.md 부모 상담 기록 양식.
 
+## 6. 예시 (작성 전에 형식과 말투를 맞추기 위해 읽는다)
+- `examples/notice-field-trip.md`: 현장체험학습 가정통신문 + 회신서
+- `examples/injury-notice.md`: 물림 사고 — 전화 순서, 문자 기록, 기관 내부 처리, 쓰지 않는 표현
+- `examples/daily-notes.md`: 알림장 (만 1세 · 3세 · 5세)
+
 말투 검토나 민감한 안내문은 `parent-communicator` 에이전트, 안전·건강 사항 확인은 `safety-health-advisor` 에이전트에 맡긴다.
