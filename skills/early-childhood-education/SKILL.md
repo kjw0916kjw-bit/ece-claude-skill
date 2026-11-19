@@ -47,6 +47,7 @@ description: 유아교육·보육(영유아, 만 0~5세) 전문 지식 베이스
 | 문서 검토 | — | `curriculum-reviewer`, `safety-health-advisor` | `/ece:review` |
 | 면접·임용·자소서 | `teacher-career` | `interview-coach` | `/ece:mock-interview` |
 | 피드백 저장 | — | — | `/ece:learn` |
+| 노트 보기·내보내기·가져오기·정리 | — | — | `/ece:notes` |
 
 ## 작업 흐름
 
