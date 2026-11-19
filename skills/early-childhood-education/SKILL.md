@@ -29,15 +29,30 @@ description: 유아교육·보육(영유아, 만 0~5세) 전문 지식 베이스
 | `references/observation-assessment.md` | 관찰 기록 방법, 유아 평가, 포트폴리오 | 관찰일지, 평가, 기록 작성 |
 | `references/templates.md` | 놀이계획·관찰기록·가정통신문·상담기록 양식과 예시 | 문서 작성 요청 |
 | `references/policy.md` | 유보통합, 기관 평가, 안전교육, 아동학대 신고 등 | 정책·제도·안전 질문 |
-| `references/user-notes.md` | 사용자가 알려준 현장 규칙·선호·피드백 | **항상** 먼저 확인 |
+| `references/user-notes.md` | 사용자 노트의 **빈 양식** (실제 노트는 아래 위치) | `/ece:learn`으로 처음 만들 때 |
+
+## 사용자 노트 (학습 기록)
+
+실제 사용자 규칙·피드백은 **`~/.claude/ece/user-notes.md`**에 저장한다. 플러그인 폴더는 업데이트 때 덮어써지므로 여기에 쓰지 않는다. 파일이 없으면 `references/user-notes.md` 양식으로 새로 만든다.
+
+## 함께 쓰는 스킬·에이전트·명령어 (ece 플러그인)
+
+| 작업 | 스킬 | 에이전트 | 명령어 |
+|---|---|---|---|
+| 놀이계획안 | `play-planning` | `play-planner` | `/ece:play-plan` |
+| 관찰기록·종합 의견 | `observation-records` | `observation-analyst` | `/ece:observe` |
+| 가정통신문·알림장·상담 | `parent-communication` | `parent-communicator` | `/ece:notice`, `/ece:daily-note`, `/ece:parent-meeting` |
+| 문서 검토 | — | `curriculum-reviewer`, `safety-health-advisor` | `/ece:review` |
+| 면접·임용·자소서 | `teacher-career` | `interview-coach` | `/ece:mock-interview` |
+| 피드백 저장 | — | — | `/ece:learn` |
 
 ## 작업 흐름
 
-1. `references/user-notes.md`를 먼저 읽고 사용자 고유 규칙을 반영한다.
+1. `~/.claude/ece/user-notes.md`가 있으면 먼저 읽고 사용자 고유 규칙을 반영한다.
 2. 대상 연령(영아/유아, 만 몇 세)과 결과물 형태를 확인한다. 불분명하면 짧게 묻거나 합리적 기본값(만 4세, 놀이중심 양식)을 쓰고 밝힌다.
 3. 관련 reference 파일을 읽고 작성한다.
 4. 누리과정/표준보육과정 **영역·내용과 연계**해서 쓴다 (예: "자연탐구 - 생활 속에서 탐구하기").
-5. 사용자가 교정·피드백을 주면 `references/user-notes.md`에 날짜와 함께 추가한다. 이것이 이 스킬이 "공부"하는 방식이다.
+5. 사용자가 교정·피드백을 주면 `~/.claude/ece/user-notes.md`에 날짜와 함께 추가한다 (`/ece:learn`과 같은 방식). 이것이 이 플러그인이 "공부"하는 방식이다.
 
 ## 자료 추가 방법
 
