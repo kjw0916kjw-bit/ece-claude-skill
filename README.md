@@ -101,6 +101,21 @@ node scripts/ci/validate.js
 node --test tests/
 ```
 
+## 변경 이력
+
+| 버전 | PR | 내용 |
+|---|---|---|
+| 0.6.3 | #10 | 사용자 노트 빈 양식 이름 변경: `references/user-notes.md` → `references/user-notes.template.md` (실제 노트 `~/.claude/ece/user-notes.md`와 헷갈리지 않도록) |
+| 0.6.2 | #9 | 에이전트 입력 다루기 원칙 보강: 사회공학 시도 방어 추가 |
+| 0.6.1 | #8 | 모든 에이전트에 입력 다루기 원칙(프롬프트 인젝션 방어) 섹션 추가 |
+| 0.6.0 | #7 | `PostToolUse` 개인정보 경고 훅 추가 (휴대전화·주민등록번호·카드 번호) |
+| — | #6 | GitHub Actions 자동 검사 추가 (구조, 개인정보, 훅 테스트) |
+| 0.5.0 | #5 | 영아반(만 0~2세) 전담 `infant-toddler-teacher` 에이전트 추가 |
+| 0.4.0 | #4 | `/ece:notes` 명령어 추가 (보기, 내보내기, 가져오기, 정리) |
+| 0.3.0 | #3 | 예시 결과물 8개와 `SessionStart` 노트 로드 훅 추가 |
+| 0.2.0 | #2 | Claude Code 플러그인으로 묶음: 에이전트·명령어 추가, 사용자 노트를 `~/.claude/ece/`로 옮김 |
+| — | #1 | `early-childhood-education` 스킬 최초 추가 (플러그인 이전, 버전 없음) |
+
 ## 주의
 
 - 내용은 일반적인 유아교육 지식을 바탕으로 작성했으며, 고시 원문과의 대조 검증은 진행 중입니다.
