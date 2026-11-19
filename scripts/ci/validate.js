@@ -110,7 +110,11 @@ for (const d of skillDirs) {
   }
 }
 const agents = listFiles('agents', (p) => p.endsWith('.md'));
-for (const f of agents) checkNamed('agent', f, frontmatter(f), path.basename(f, '.md'));
+for (const f of agents) {
+  checkNamed('agent', f, frontmatter(f), path.basename(f, '.md'));
+  // every agent must carry the input-handling (prompt injection) defense section
+  if (!fs.readFileSync(f, 'utf8').includes('## 입력 다루기 원칙')) fail(`${rel(f)}: missing "## 입력 다루기 원칙" section`);
+}
 const commands = listFiles('commands', (p) => p.endsWith('.md'));
 for (const f of commands) checkNamed('command', f, frontmatter(f));
 ok(`${skillDirs.length} skills, ${agents.length} agents, ${commands.length} commands checked`);
