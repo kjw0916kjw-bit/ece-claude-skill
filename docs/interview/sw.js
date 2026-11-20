@@ -1,5 +1,5 @@
 // 상황면접 연습실 오프라인 캐시. 앱 파일을 바꾸면 VERSION을 올린다.
-const VERSION = 'interview-v3';
+const VERSION = 'interview-v4';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon.svg', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', (e) => {
