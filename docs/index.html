@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ECE 유아교육 도구</title>
+<meta name="theme-color" content="#2f7d5b">
+<link rel="icon" href="interview/icon.svg" type="image/svg+xml">
+<style>
+:root { --bg:#f2f5f3; --surface:#fff; --ink:#1d2a28; --muted:#5b6b67; --line:#d9e2de; --accent:#2f7d5b; --accent-ink:#fff; }
+@media (prefers-color-scheme: dark) { :root { --bg:#131a19; --surface:#1b2423; --ink:#e5ece9; --muted:#9aaba6; --line:#2e3b39; --accent:#5fbf92; --accent-ink:#0d1a15; color-scheme: dark; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif; line-height:1.65; word-break:keep-all; }
+main { max-width:720px; margin:0 auto; padding:40px max(16px, env(safe-area-inset-left,0px)) 64px; display:flex; flex-direction:column; gap:20px; }
+h1 { margin:0; font-size:28px; }
+p { margin:0; color:var(--muted); }
+a.card { display:flex; gap:16px; align-items:center; text-decoration:none; color:inherit; background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:18px; }
+a.card:hover, a.card:focus-visible { border-color:var(--accent); outline:none; }
+a.card img { width:56px; height:56px; border-radius:12px; flex:none; }
+a.card strong { display:block; font-size:18px; }
+small { color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>ECE 유아교육 도구</h1>
+  <p>어린이집·유치원 선생님을 위한 ECE Claude Code 플러그인의 웹 도구 모음이에요. 설치 없이 브라우저에서 바로 쓸 수 있고, 휴대폰이나 PC에 앱으로 설치할 수도 있어요.</p>
+  <a class="card" href="interview/">
+    <img src="interview/icon-192.png" alt="">
+    <span><strong>보육교사 상황면접 연습실</strong><small>채용 면접 상황 질문 12문항 · 원장 꼬리 질문 · 1분 타이머 · 체크리스트와 모범 답안</small></span>
+  </a>
+  <p><small>플러그인 설치와 소스는 <a href="https://github.com/kjw0916kjw-bit/ece-claude-skill">GitHub 저장소</a>에서 볼 수 있어요.</small></p>
+</main>
+</body>
+</html>
