@@ -130,7 +130,7 @@ const PRIVACY = [
   { name: 'GitHub token', re: /\bgh[pousr]_[A-Za-z0-9]{20,}/ },
   { name: 'Anthropic API key', re: /\bsk-ant-[A-Za-z0-9_-]{20,}/ },
 ];
-const SCAN_EXT = /\.(md|json|js|ya?ml|txt)$/;
+const SCAN_EXT = /\.(md|json|js|ya?ml|txt|html|webmanifest)$/;
 const scanFiles = listFiles('.', (p) => SCAN_EXT.test(p) && !/[\\/](\.git|node_modules)[\\/]/.test(p));
 let privacyHits = 0;
 for (const f of scanFiles) {
