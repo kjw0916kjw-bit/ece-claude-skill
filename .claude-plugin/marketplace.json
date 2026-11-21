@@ -12,7 +12,7 @@
       "name": "ece",
       "source": "./",
       "description": "누리과정·표준보육과정 기반 놀이계획, 관찰기록, 가정통신문, 부모상담, 문서 검토, 교사 면접 준비 — 스킬 5개 · 에이전트 7명 · 명령어 9개 · 예시 8개 · 노트 자동 로드 훅 · 개인정보 경고 훅",
-      "version": "0.6.3",
+      "version": "0.7.0",
       "license": "MIT",
       "category": "education",
       "keywords": ["유아교육", "보육", "누리과정", "early-childhood-education"]
